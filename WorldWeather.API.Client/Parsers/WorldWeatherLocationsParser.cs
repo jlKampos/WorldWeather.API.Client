@@ -31,9 +31,9 @@ namespace WorldWeather.API.Client.Parsers
 		{
 			try
 			{
-				SortedDictionary<string, List<CityFromList>> countriesHash = new SortedDictionary<string, List<CityFromList>>();
+				SortedDictionary<string, List<CityFromList>> countriesHash = new SortedDictionary<string, List<CityFromList>>(StringComparer.OrdinalIgnoreCase);
 
-				Regex rx = new Regex("\"(\\w+)\"\\;\"(\\w+)\"\\;\"(\\d+)\"");
+				Regex rx = new Regex("\"(.*)\"\\;\"(.*)\"\\;\"(\\d+)\"");
 
 				foreach (Match match in rx.Matches(locationsTXT))
 				{
@@ -43,8 +43,10 @@ namespace WorldWeather.API.Client.Parsers
 
 					if (!countriesHash.ContainsKey(country))
 					{
-						List<CityFromList> cityList = new List<CityFromList>();
-						cityList.Add(new CityFromList(cityID, city));
+						List<CityFromList> cityList = new List<CityFromList>
+						{
+							new CityFromList(cityID, city)
+						};
 						countriesHash.Add(country, cityList);
 					}
 					else

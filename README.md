@@ -1,5 +1,7 @@
 # WorldWeather.API.Client
 
+[![.NET Framework Nuget](https://img.shields.io/nuget/v/WorldWeather.API.Client.svg?color=Green&label=.NET%20Framework%20Nuget&logo=nuget&logoColor=Green&style=popout-square)](https://www.nuget.org/packages/WorldWeather.API.Client/) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-green.svg?style=popout-square&logo=gnu&logoColor=Black)](https://www.gnu.org/licenses/lgpl-3.0) 
+
 ##### **25-09-2019** 
 Fixed regex pattern
 

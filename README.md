@@ -5,10 +5,10 @@ Fixed regex pattern
 
 **Functionalities Provided in this release**
 ```csharp
-		public static SortedDictionary<string, List<CityFromList>> GetLocations()
-		public static Task<SortedDictionary<string, List<CityFromList>>> GetLocationsAsync()
-		public static Weather GetCityForecast(int cityID)
-		public static async Task<Weather> GetCityForecastAsync(int cityID)
+	public static SortedDictionary<string, List<CityFromList>> GetLocations()
+	public static Task<SortedDictionary<string, List<CityFromList>>> GetLocationsAsync()
+	public static Weather GetCityForecast(int cityID)
+	public static async Task<Weather> GetCityForecastAsync(int cityID)
 
 ```
 
